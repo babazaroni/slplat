@@ -12,7 +12,7 @@ from slplat_utils import get_path_points
 # There are two ways to enter curves:
 # 1 if your curve is tangent to the current bearing, then specify tangent and give direction, left or right, radius and length
 # 2 if your curve is not tangent, then you can specify the bearing to the center of the circle with the delta from the current bearing
-#   Then specify radius and length, followed by the direction of the curve clockwise(cw) or counterclockwise(ccw)
+#   Then specify radius and length, followed by the direction of the curve clockwise(cw) or counter clockwise(ccw)
 #   You can specify a tangent curve with delta by specifying "delta 90" or "delta 270"
 
 

@@ -5,7 +5,8 @@ import streamlit as st
 import math
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from slplat_utils import *
+
+from slplat_utils import get_path_points
 
 #import plat descriptors from definition file here
 from myproperty import pix
