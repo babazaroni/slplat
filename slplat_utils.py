@@ -214,3 +214,16 @@ def get_path_points(origin,path,x_sign = 1, y_sign = 1):
     
     return rval
 
+def last_point(segments):
+    seg = segments[-1]
+    return [seg[0][-1],seg[1][-1]]
+
+class plot_info():
+    def __init__(self,text,origin,path,aux_info = None):
+        self.text = text
+        self.origin = origin
+        self.path = path
+        self.selected = False
+        self.aux_info = aux_info
+
+

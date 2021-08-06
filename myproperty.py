@@ -1,5 +1,5 @@
 
-from slplat_utils import get_path_points
+from slplat_utils import get_path_points,plot_info,last_point
 
 # Straignt Lines
 #
@@ -16,7 +16,6 @@ from slplat_utils import get_path_points
 #   You can specify a tangent curve with delta by specifying "delta 90" or "delta 270"
 
 
-
 #1963 Hoffmann
 #parcel 1
 path_1963_hoffmann_parcel_1 = [
@@ -28,8 +27,8 @@ path_1963_hoffmann_parcel_1 = [
     "n 85 24 10 e 39.77",
     "n 83 11 05 e 23.75",
     "n 38 49 04 w 20.89",
-    #"s 68 00 w 6.75 delta 90 radius 30 length 5.67 cw",
-    "s 68 00 w 6.75 tangent right radius 30 length 5.67",
+    #"s 68 00 w 6.75 delta 90 radius 30 length 5.67 cw",  #method 2 for a tangent curve
+    "s 68 00 w 6.75 tangent right radius 30 length 5.67", #method 1 for a tangent curve
 
     "n 7 26 30 e 19.92",
 
@@ -306,13 +305,10 @@ path_radius_debug = [
 ]
 
 
-def last_point(segments):
-    seg = segments[-1]
-    return [seg[0][-1],seg[1][-1]]
-
 #setup various origins
 
 orig_station_14 = (0,0)
+orig_unknown = [0,25]
 
 segments = get_path_points(orig_station_14,path_pob_parcel_b,1,-1) # change y coordinate to match matplotlib
 orig_parcel_b = last_point(segments)
@@ -324,17 +320,9 @@ segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_cor
 orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
 orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 
-orig_unknown = [0,25]
 
 unknowwn_origin_info = {'pos_x':-10,'pos_y':30,'text':'unknown origin'}
 
-class plot_info():
-    def __init__(self,text,origin,path,aux_info = None):
-        self.text = text
-        self.origin = origin
-        self.path = path
-        self.selected = False
-        self.aux_info = aux_info
 
 pix = []
 
