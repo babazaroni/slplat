@@ -28,6 +28,7 @@ for pi in pix:
     else:
         pi.selected = False
 
+
 st.pyplot(fig)
 
 for pi in pix:

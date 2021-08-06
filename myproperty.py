@@ -1,36 +1,6 @@
 
 from slplat_utils import get_path_points
 
-marker_vertical = ["n 0 w 5"]
-
-path_proposed_parcel_c = ["n 55 21 57 e 144.73"]
-path_split_ab = ["n 4 5 1 w 39.37","n 88 20 9 e 4.16","n 6 26 34 e 28.2","n 65 6 36 e 22.93","n 25 w 42"]
-
-path_2016_lot_line = [
-    "s 38 14 e 3.52",
-    "s 38 39 45 e 11.48",
-    "pob",
-    "n 86 28 37 e 20.26",   #L8
-    "n 39 52 45 e 24",      #L7
-    "n 62 51 e 115.58",
-    "s 79 4 21 e 26",      #L15
-    "s 84 4 31 e 61.02",
-    "n 68 28 33 e 55.22",
-    "s 4 55 w 41.32",
-    "s 4 55 w 112.86",
-    "s 31 8 24 w 70.1",
-    "n 39 10 19 w 116.33",
-    [path_proposed_parcel_c],
-    "s 83 11 5 w 24.32",
-    [path_split_ab],
-    "s 85 24 10 w 18.28",
-    #[marker_vertical],
-    "s 85 24 10 w 60.91",
-    "s 72 41 20 w 12.74",
-    "n 45 53 w 78.37"
-
-
-]
 
 path_1977_pd_120_parcel_c = [
     "s 38 14 e 3.52",
@@ -60,21 +30,18 @@ path_1963_hoffmann_parcel_1 = [
     "n 85 24 10 e 39.77",
     "n 83 11 05 e 23.75",
     "n 38 49 04 w 20.89",
-    "s 68 00 w 6.75",
-
-    #r 30 5.67
-    "s 73.414451164 w 5.66156468111",
+    #"s 68 00 w 6.75 delta 90 radius 30 length 5.67 cw",
+    "s 68 00 w 6.75 tangent right radius 30 length 5.67",
 
     "n 7 26 30 e 19.92",
-    "n 8 48 w 12",
 
-    #r 20 31.42
-    "n 36.2058348075 e 28.2871514749",
+    #"n 8 48 w 12 delta 90 radius 20 length 31.42 cw",
+    "n 8 48 w 12 tangent right radius 20 length 31.42",
 
-    "n 81 12 e 36",
 
-    #r 20 23.02
-    "s 65.8262788902 e 21.7701727535",
+    #"n 81 12 e 36 delta 90 radius 20 length 23.02 cw",
+    "n 81 12 e 36 tangent right radius 20 length 23.02",
+
 
     "s 33 03 14 e 112.52",
     "n 5 10 e 154.66",
@@ -165,13 +132,11 @@ path_1965_Morse_Easement = [
     "s 11 w 21.42",
 
     "s 71 40 4 w 14.18",
-    "s 85 24 10 w 35.99",
 
-    #"s 85 24 10 w arc r 17 17",
-    "n 65.9493324657 w 16.3004683125",
+    #"s 85 24 10 w 35.99 delta 90 radius 17 length 17 cw",
+    "s 85 24 10 w 35.99 tangent right radius 17 length 17",
 
     "n 45 53 w 40.14",
-
     "s 86 28 37 w 6.87",
     "n 38 39 45 w 11.48",
     "n 38 14 w 3.52"
@@ -191,24 +156,15 @@ path_1969_Arkley_Morse_Parcel_1 = [
     "n 83 11 05 e 23.75",
     "pob",
     "n 38 49 4 w 20.89",
-    "s 68 00 w 6.75",
-
-    #r 30 5.67
-    's 73.414451164 w 5.66156468111',
+    #"s 68 00 w 6.75 delta 90 radius 30 length 5.67 cw",
+    "s 68 00 w 6.75 tangent right radius 30 length 5.67",
 
     "n 7 26 30 e 19.92",
-    "n 8 48 w 12",
+    #"n 8 48 w 12 delta 90 radius 20 length 31.42 cw",
+    "n 8 48 w 12 tangent right radius 20 length 31.42",
 
-    #r 20 31.42
-    'n 36.2058348075 e 28.2871514749',
-
-    "n 81 12 e 36",
-
-    #r 20 23.02
-    "s 65.8262788902 e 21.7701727535",
-    #S 43 50 37 E 7.63
-    #S 65 49 34 E 7.63
-    #S 87 48 31 E 7.63
+    #"n 81 12 e 36 delta 90 radius 20 length 23.02 cw",
+    "n 81 12 e 36 tangent right radius 20 length 23.02",
 
     "s 33 3 14 e 112.52",
     "s 31 10 w 70",
@@ -225,22 +181,12 @@ path_1969_Arkley_Morse_Parcel_2 = [
     "n 85 24 10 e 39.77",
     "n 83 11 5 e 23.75",
     "n 38 49 4 w 20.89",
-    "s 68 0 w 6.75",
-
-    #r 30 5.67
-    #'s 73.414451164 w 5.66156468111',
-    "S 69 48 17 W 1.89",
-    "S 73 24 52 W 1.89",
-    "S 77 1 26 W 1.89",
+    #"s 68 0 w 6.75 delta 90 radius 30 length 5.67 cw",
+    "s 68 0 w 6.75 tangent right radius 30 length 5.67",
 
     "s 85 24 10 w 61.19",
-    "s 89 12 20 w 20.89",
-
-    #r 17.25 13.52
-    #"n 68.3411418642 w 13.1765960954",
-    "N 83 18 36 W 4.49",
-    "N 68 20 28 W 4.49",
-    "N 53 22 20 W 4.49",
+    #"s 89 12 20 w 20.89 delta 90 radius 17.25 length 13.52 cw",
+    "s 89 12 20 w 20.89 tangent right radius 17.25 length 13.52",
 
     "n 45 53 w 44.55",
     "s 86 28 37 w 2.85",
@@ -253,17 +199,8 @@ path_1969_Arkley_Morse_Parcel_3 = [
     "s 8 10 30 e .27",
     "n 85 24 10 e 39.77",
     "n 83 11 5 e 23.75",
-    "s 68 0 w 11.8",
-
-    #r 50 9.45
-    #"s 73.414451164 w 9.43594113518",
-    "S 69 48 17 W 3.15",
-    "S 73 24 52 W 3.15",
-    "S 77 1 26 W 3.15",
-
-    #S 77 1 26 W 3.15
-    #S 73 24 52 W 3.15
-    #S 69 48 17 W 3.15
+    #"s 68 0 w 11.8 delta 90 radius 50 length 9.45 cw",
+    "s 68 0 w 11.8 tangent right radius 50 length 9.45",
 
     "s 78 50 w 42.06",
     "n 8 10 30 w 9.73",
@@ -298,6 +235,36 @@ path_1999_Morse_Morse_Parcel_B_Easement = [
     "s 8 48 e 27.07"
 ]
 
+marker_vertical = ["n 0 w 5"]
+
+path_proposed_parcel_c = ["n 55 21 57 e 144.73"]
+path_split_ab = ["n 4 5 1 w 39.37","n 88 20 9 e 4.16","n 6 26 34 e 28.2","n 65 6 36 e 22.93","n 25 w 42"]
+
+path_2016_lot_line = [
+    "s 38 14 e 3.52",
+    "s 38 39 45 e 11.48",
+    "pob",
+    "n 86 28 37 e 20.26",   #L8
+    "n 39 52 45 e 24",      #L7
+    "n 62 51 e 115.58",
+    "s 79 4 21 e 26",      #L15
+    "s 84 4 31 e 61.02",
+    "n 68 28 33 e 55.22",
+    "s 4 55 w 41.32",
+    "s 4 55 w 112.86",
+    "s 31 8 24 w 70.1",
+    "n 39 10 19 w 116.33",
+    [path_proposed_parcel_c],
+    "s 83 11 5 w 24.32",
+    [path_split_ab],
+    "s 85 24 10 w 18.28",
+    #[marker_vertical],
+    "s 85 24 10 w 60.91",
+    "s 72 41 20 w 12.74",
+    "n 45 53 w 78.37 delta 74 13 43 radius 15 length 19.43 ccw",
+]
+
+
 
 
 path_pob_parcel_b = [
@@ -318,6 +285,17 @@ path_pob_nw_parcel_c = [ # from pd 120
     "s 84 4 31 e 48.35",
     "s 84 4 31 e 12.67",
     "n 68 58 40 e 55.73", # could be 55.23
+]
+
+path_radius_debug = [
+    "s 0 w 20",
+    "s 90 w 20",
+#    "n 0 e 20 delta 90 radius 10 length 62.83 ccw",
+
+#    "n 0 e 20 delta 90 radius 10 length 31.4 ccw",
+ #   "n 0 e 20 delta 90 radius 10 length 15.7079632679 cw"
+    "n 0 e 20 tangent left radius 10 length 15"
+
 ]
 
 
@@ -365,3 +343,5 @@ pix.append(plot_info("1977 Kamm Morse PD 120 Parcel C", pob_station_14,     path
 pix.append(plot_info("1999 Morse Morse Parcel B",       pob_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B))
 pix.append(plot_info("1999 Morse Morse Parcel B Easement",pob_parcel_b,     path_1999_Morse_Morse_Parcel_B_Easement))
 pix.append(plot_info("2016 Lot Line Adjustment",        pob_station_14,     path_2016_lot_line))
+pix.append(plot_info("path_radius_debug",               pob_station_14,     path_radius_debug))
+
