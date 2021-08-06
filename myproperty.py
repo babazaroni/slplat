@@ -1,24 +1,6 @@
 
 from slplat_utils import get_path_points
 
-
-path_1977_pd_120_parcel_c = [
-    "s 38 14 e 3.52",
-    "s 38 39 45 e 11.48",
-    "n 86 28 37 e 20.26",
-    "n 39 52 45 e 24",
-    "n 62 51 e 70",
-    "n 62 51 e 45.58",
-    "s 79 4 21 e 26",
-    "s 84 4 31 e 48.35",
-    "pob",
-    "s 84 4 31 e 12.67",
-    "n 68 58 40 e 55.73", # could be 55.23
-    "s 6 10 w 154.66",
-    "n 33 3 14 w 112.52",
-    "n 15 7 59 e 42.7"
-]
-
 #1963 Hoffmann
 #parcel 1
 path_1963_hoffmann_parcel_1 = [
@@ -206,6 +188,23 @@ path_1969_Arkley_Morse_Parcel_3 = [
     "n 8 10 30 w 9.73",
 ]
 
+path_1977_pd_120_parcel_c = [
+    "s 38 14 e 3.52",
+    "s 38 39 45 e 11.48",
+    "n 86 28 37 e 20.26",
+    "n 39 52 45 e 24",
+    "n 62 51 e 70",
+    "n 62 51 e 45.58",
+    "s 79 4 21 e 26",
+    "s 84 4 31 e 48.35",
+    "pob",
+    "s 84 4 31 e 12.67",
+    "n 68 58 40 e 55.73", # could be 55.23
+    "s 6 10 w 154.66",
+    "n 33 3 14 w 112.52",
+    "n 15 7 59 e 42.7"
+]
+
 #1999 57 Panoramic
 #Parcel B
 path_1999_Morse_Morse_Parcel_B = [
@@ -264,9 +263,6 @@ path_2016_lot_line = [
     "n 45 53 w 78.37 delta 74 13 43 radius 15 length 19.43 ccw",
 ]
 
-
-
-
 path_pob_parcel_b = [
     "s 35 40  w 15",
     "s 45 53 e 78.37",
@@ -303,7 +299,6 @@ def last_point(segments):
     seg = segments[-1]
     return [seg[0][-1],seg[1][-1]]
 
-
 pob_station_14 = (0,0)
 
 segments = get_path_points(pob_station_14,path_pob_parcel_b,1,-1) # change y coordinate to match matplotlib
@@ -317,7 +312,6 @@ pob_1963_hoffman_parcel_3_se_corner = last_point(segments)
 pob_se_crnr = pob_1963_hoffman_parcel_3_se_corner
 
 pob_unknown = [0,25]
-
 
 unknowwn_origin_info = {'pos_x':-10,'pos_y':30,'text':'unknown origin'}
 
