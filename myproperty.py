@@ -350,4 +350,4 @@ pix.append(plot_info("1977 Kamm Morse PD 120 Parcel C", orig_station_14,     pat
 pix.append(plot_info("1999 Morse Morse Parcel B",       orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B))
 pix.append(plot_info("1999 Morse Morse Parcel B Easement",orig_parcel_b,     path_1999_Morse_Morse_Parcel_B_Easement))
 pix.append(plot_info("2016 Lot Line Adjustment",        orig_station_14,     path_2016_lot_line))
-pix.append(plot_info("path_radius_debug",               orig_station_14,     path_radius_debug))
+pix.append(plot_info("path radius_debug",               orig_station_14,     path_radius_debug))
