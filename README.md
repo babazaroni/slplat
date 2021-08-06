@@ -6,4 +6,4 @@ To install Streamlit:
   pip install streamlit
 
 To run:
-  streamlit run slplot.py
+  Clone the repo, then from within repo directory give the command: streamlit run slplot.py
