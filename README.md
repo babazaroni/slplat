@@ -4,4 +4,4 @@ This is a streamlit project that displays plats which are found in property desc
 
 To install Streamlit: pip install streamlit
 
-To run: Clone the repo. Then from within the repo directory give the command: streamlit run slplat.py
+To run: Clone the repo. Then from within the repo directory give the command "streamlit run slplat.py"
