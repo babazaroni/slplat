@@ -1,6 +1,22 @@
 
 from slplat_utils import get_path_points
 
+# Straignt Lines
+#
+# The standard way is to specify a bearig by it's offset from north or south and the direction of the offset, west or east.
+# The offset is specified by degrees, followed by optional minutes, seconds and even finer divisions by 60 if desired
+# After the bearing, you can specify the distance.
+
+# Circular Curves
+#
+# There are two ways to enter curves:
+# 1 if your curve is tangent to the current bearing, then specify tangent and give direction, left or right, radius and length
+# 2 if your curve is not tangent, then you can specify the bearing to the center of the circle with the delta from the current bearing
+#   Then specify radias and length, followed by the direction of the curve clockwise(cw) or counterclockwise(ccw)
+#   You can specify a tangent curve with delta by specifying "delta 90" or "delta 270"
+
+
+
 #1963 Hoffmann
 #parcel 1
 path_1963_hoffmann_parcel_1 = [
@@ -45,15 +61,9 @@ path_1963_hoffmann_parcel_2 = [
     "n 38 49 04 w 15.67",
     "n 68 0 e 48.59 tangent left radius 10 length 3.49",
 
-    #l 10 3.49
-    #"n 58.001886475 e 3.47231505162",
-
     "n 48 0 e 25.48",
     "s 33 04 14 e 15.19",
     "s 48 00 w 23.12 tangent right radius 25 length 8.73",
-
-    #r 25 8.73
-    #"s 58.003843103 w 8.68571165299",
     
     "s 68 00 w 44.06",
 ]
