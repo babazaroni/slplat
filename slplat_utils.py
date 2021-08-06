@@ -107,17 +107,17 @@ def get_xy(mb):
             delta_angle = 270
             cw = -1
 
-    print()
-    print()
+    #print()
+    #print()
 
-    print("tangent_curve:",tangent_curve)
-    print("curve_dir:",curve_dir)
+    #print("tangent_curve:",tangent_curve)
+    #print("curve_dir:",curve_dir)
 
-    print("tangent_dir",tangent_dir)
-    print("delta_angle",delta_angle)
-    print("radius:",radius)
-    print("arc_length:",arc_length)
-    print("cw:",cw)
+    #print("tangent_dir",tangent_dir)
+    #print("delta_angle",delta_angle)
+    #print("radius:",radius)
+    #print("arc_length:",arc_length)
+    #print("cw:",cw)
 
 
     if nb(tangent_dir)  and nb(delta_angle) and nb(radius) and nb(arc_length) and nb(cw):
@@ -213,43 +213,4 @@ def get_path_points(origin,path,x_sign = 1, y_sign = 1):
     rval.extend(branches)
     
     return rval
-
-def arc_points(x,y,dir,mb):
-
-    print("cannot decode arc: ",mb)
-    delta = radius = length = None
-    delta_mode,radius_mode,length_mode = (False,False,False)
-
-    for p in mb.split():
-        if p == 'delta':
-            delta_mode,radius_mode,length_mode = (True,False,False)
-            angle_fact = 1.0
-            delta = 0
-        else:
-            if p == 'radius':
-               delta_mode,radius_mode,length_mode = (False,True,False)
-            else:
-                if p == 'length':
-                    delta_mode,radius_mode,length_mode = (False,False,True)
-                else:
-                    try:
-                        val = float(p)
-                    except:
-                        continue
-
-                    if delta_mode:
-                        delta += val * angle_fact
-                        angle_fact /= 60.0
-                    if radius_mode:
-                        radius = val
-                    if length_mode:
-                        length = val
-
-    if delta and radius and length:
-        print("delta:",delta)
-        print("radius",radius)
-        print("length",length)
-
-    return [],[]
-
 

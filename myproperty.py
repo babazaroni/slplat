@@ -300,19 +300,21 @@ def last_point(segments):
     seg = segments[-1]
     return [seg[0][-1],seg[1][-1]]
 
-pob_station_14 = (0,0)
+#setup various origins
 
-segments = get_path_points(pob_station_14,path_pob_parcel_b,1,-1) # change y coordinate to match matplotlib
-pob_parcel_b = last_point(segments)
+orig_station_14 = (0,0)
 
-segments = get_path_points(pob_station_14,path_pob_nw_parcel_c,1,-1) # change y coordinate to match matplotlib
-pob_nw_parcel_c = last_point(segments)
+segments = get_path_points(orig_station_14,path_pob_parcel_b,1,-1) # change y coordinate to match matplotlib
+orig_parcel_b = last_point(segments)
 
-segments = get_path_points(pob_station_14,path_pob_1963_hoffman_parcel_3_se_corner,1,-1)
-pob_1963_hoffman_parcel_3_se_corner = last_point(segments)
-pob_se_crnr = pob_1963_hoffman_parcel_3_se_corner
+segments = get_path_points(orig_station_14,path_pob_nw_parcel_c,1,-1) # change y coordinate to match matplotlib
+orig_nw_parcel_c = last_point(segments)
 
-pob_unknown = [0,25]
+segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_corner,1,-1)
+orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
+orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
+
+orig_unknown = [0,25]
 
 unknowwn_origin_info = {'pos_x':-10,'pos_y':30,'text':'unknown origin'}
 
@@ -326,17 +328,16 @@ class plot_info():
 
 pix = []
 
-pix.append(plot_info("1963 Hoffman Parcel 1",           pob_station_14,     path_1963_hoffmann_parcel_1))
-pix.append(plot_info("1963 Hoffman Parcel 2 easement",  pob_se_crnr,        path_1963_hoffmann_parcel_2))
-pix.append(plot_info("1963 Hoffman Parcel 3",           pob_station_14,     path_1963_hoffmann_parcel_3))
-pix.append(plot_info("1965 Morse Parcel A",             pob_station_14,     path_1965_Morse_Deed_Parcel_A))
-pix.append(plot_info("1965 Morse Easement",             pob_station_14,     path_1965_Morse_Easement))
-pix.append(plot_info("1969 Arkley Morse Parcel 1",      pob_station_14,     path_1969_Arkley_Morse_Parcel_1))
-pix.append(plot_info("1969 Arkley Morse Parcel 2",      pob_station_14,     path_1969_Arkley_Morse_Parcel_2))
-pix.append(plot_info("1969 Arkley Morse Parcel 3",      pob_unknown,        path_1969_Arkley_Morse_Parcel_3, unknowwn_origin_info))
-pix.append(plot_info("1977 Kamm Morse PD 120 Parcel C", pob_station_14,     path_1977_pd_120_parcel_c))
-pix.append(plot_info("1999 Morse Morse Parcel B",       pob_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B))
-pix.append(plot_info("1999 Morse Morse Parcel B Easement",pob_parcel_b,     path_1999_Morse_Morse_Parcel_B_Easement))
-pix.append(plot_info("2016 Lot Line Adjustment",        pob_station_14,     path_2016_lot_line))
-pix.append(plot_info("path_radius_debug",               pob_station_14,     path_radius_debug))
-
+pix.append(plot_info("1963 Hoffman Parcel 1",           orig_station_14,     path_1963_hoffmann_parcel_1))
+pix.append(plot_info("1963 Hoffman Parcel 2 easement",  orig_se_crnr,        path_1963_hoffmann_parcel_2))
+pix.append(plot_info("1963 Hoffman Parcel 3",           orig_station_14,     path_1963_hoffmann_parcel_3))
+pix.append(plot_info("1965 Morse Parcel A",             orig_station_14,     path_1965_Morse_Deed_Parcel_A))
+pix.append(plot_info("1965 Morse Easement",             orig_station_14,     path_1965_Morse_Easement))
+pix.append(plot_info("1969 Arkley Morse Parcel 1",      orig_station_14,     path_1969_Arkley_Morse_Parcel_1))
+pix.append(plot_info("1969 Arkley Morse Parcel 2",      orig_station_14,     path_1969_Arkley_Morse_Parcel_2))
+pix.append(plot_info("1969 Arkley Morse Parcel 3",      orig_unknown,        path_1969_Arkley_Morse_Parcel_3, unknowwn_origin_info))
+pix.append(plot_info("1977 Kamm Morse PD 120 Parcel C", orig_station_14,     path_1977_pd_120_parcel_c))
+pix.append(plot_info("1999 Morse Morse Parcel B",       orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B))
+pix.append(plot_info("1999 Morse Morse Parcel B Easement",orig_parcel_b,     path_1999_Morse_Morse_Parcel_B_Easement))
+pix.append(plot_info("2016 Lot Line Adjustment",        orig_station_14,     path_2016_lot_line))
+pix.append(plot_info("path_radius_debug",               orig_station_14,     path_radius_debug))
