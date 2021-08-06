@@ -324,18 +324,18 @@ orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 unknowwn_origin_info = {'pos_x':-10,'pos_y':30,'text':'unknown origin'}
 
 
-pix = []
-
-pix.append(plot_info("1963 Hoffman Parcel 1",           orig_station_14,     path_1963_hoffmann_parcel_1))
-pix.append(plot_info("1963 Hoffman Parcel 2 easement",  orig_se_crnr,        path_1963_hoffmann_parcel_2))
-pix.append(plot_info("1963 Hoffman Parcel 3",           orig_station_14,     path_1963_hoffmann_parcel_3))
-pix.append(plot_info("1965 Morse Parcel A",             orig_station_14,     path_1965_Morse_Deed_Parcel_A))
-pix.append(plot_info("1965 Morse Easement",             orig_station_14,     path_1965_Morse_Easement))
-pix.append(plot_info("1969 Arkley Morse Parcel 1",      orig_station_14,     path_1969_Arkley_Morse_Parcel_1))
-pix.append(plot_info("1969 Arkley Morse Parcel 2",      orig_station_14,     path_1969_Arkley_Morse_Parcel_2))
-pix.append(plot_info("1969 Arkley Morse Parcel 3",      orig_unknown,        path_1969_Arkley_Morse_Parcel_3, unknowwn_origin_info))
-pix.append(plot_info("1977 Kamm Morse PD 120 Parcel C", orig_station_14,     path_1977_pd_120_parcel_c))
-pix.append(plot_info("1999 Morse Morse Parcel B",       orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B))
-pix.append(plot_info("1999 Morse Morse Parcel B Easement",orig_parcel_b,     path_1999_Morse_Morse_Parcel_B_Easement))
-pix.append(plot_info("2016 Lot Line Adjustment",        orig_station_14,     path_2016_lot_line))
-pix.append(plot_info("path radius_debug",               orig_station_14,     path_radius_debug))
+pix = [
+    plot_info("1963 Hoffman Parcel 1",              orig_station_14,     path_1963_hoffmann_parcel_1),
+    plot_info("1963 Hoffman Parcel 2 easement",     orig_se_crnr,        path_1963_hoffmann_parcel_2),
+    plot_info("1963 Hoffman Parcel 3",              orig_station_14,     path_1963_hoffmann_parcel_3),
+    plot_info("1965 Morse Parcel A",                orig_station_14,     path_1965_Morse_Deed_Parcel_A),
+    plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
+    plot_info("1969 Arkley Morse Parcel 1",         orig_station_14,     path_1969_Arkley_Morse_Parcel_1),
+    plot_info("1969 Arkley Morse Parcel 2",         orig_station_14,     path_1969_Arkley_Morse_Parcel_2),
+    plot_info("1969 Arkley Morse Parcel 3",         orig_unknown,        path_1969_Arkley_Morse_Parcel_3, unknowwn_origin_info),
+    plot_info("1977 Kamm Morse PD 120 Parcel C",    orig_station_14,     path_1977_pd_120_parcel_c),
+    plot_info("1999 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B),
+    plot_info("1999 Morse Morse Parcel B Easement", orig_parcel_b,       path_1999_Morse_Morse_Parcel_B_Easement),
+    plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
+    plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
+]
