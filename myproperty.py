@@ -320,6 +320,98 @@ path_pob_nw_parcel_c = [ # from pd 120
     "n 68 58 40 e 55.73", # could be 55.23
 ]
 
+path_2016_Pyle_easement = [
+    # Beginning at the most western corner of Parcel A, as shown on 
+    # Lot Line Adjustment 314 recorded November 16, 2016, at Series 
+    # Number 2016299641, in Official Records of the County
+    # of Alameda, thence along the southwestern, southern and eastern lines of said Parcel A, 
+    #
+    # the following courses: 
+    #
+    # South 45° 53' East, 78.37 feet; 
+    "s 45 53 e 78.37",
+    # North 72° 41' 20" East, 12.74 feet; 
+    "n 72 41 20 e 12.74", 
+    # North 85° 24' 10" East, 79.19 feet; and 
+    "n 85 24 10 e 79.19",
+    # North 04° 05" 01' West, 15.00 feet; thence 
+    "n 04 05 01 w 15.00",
+    # South 85° 24' 10" West, 42.15 feet; thence 
+    "s 85 24 10 w 42.15",
+    # North 88° 52' 35" West, 45.49 feet; thence 
+    "n 88 52 35 w 45.49",
+    # North 45° 53' 00" West, 47.15 feet to the northern line of said Parcel A; 
+    "n 45 53 00 w 47.15",
+    # thence along the northern lines of Parcel A the following courses: 
+    # South 86° 28' 37" West, 6.87 feet; and 
+    "s 86 28 37 w 6.87",
+    # along the arc of a curve concave to the north, 
+    #    with a tangent bearing of South 51 ° 26' 18" West, 
+    #    a radius of 15.00 feet, and a
+    #    central angle of 74° 13' 43", 
+    #    an arc length of 19.43 feet to the_point of beginning.
+    "s 51 26 18 w tangent right radius 15 length 19.43"
+]
+
+path_54_Pano_easement = [
+    # A portion of that certain parcel of land described in Deed from the Regents of the University of California, a corporation, to Michael L. Kamm and wife, dated July 15, 1953, recorded July 28, 1953, under Recoder's Series No. AH-67256, Book 7092, Page 477, Alameda County Records, bounded as follows: 
+    # Beginning at Station 14 in the center line of Panoramic Way, as said Station and Way are shown on the map of "University Terrace", filed August 14, 1888, Map Book 10, Page 30, Alameda County Records; 
+    # running thence along the exterior boundary line of the said Kamm parcel of land the two following courses and distance; 
+    # South 35° 40' West 15.00 feet to an angle point thereon and thence
+    "s 35 40 w 15.00", 
+    # South 45° 53' East 78.37 feet; thence 
+    "s 45 53 e 78.37",
+    # North 72° 41' 20" East 12.74 feet; thence 
+    "n 72 41 20 e 12.74",
+    # North 85° 24' 10" East 37.15 feet to the most Western corner of that certain parcel of land designated as Parcel Three in Quitclaim Deed from Anne Barnett to Michael L. Kamm and Lenore K. Kamm, his wife, dated April 7, 1959, recorded June 18, 1959, under Recorder's Series No. AQ-72502, Book 9063, Page 509, Alameda County Records; thence 
+    "n 85 24 10 e 37.15",
+    # along the Southern boundary line thereof, 
+    # North 85° 24' 10" East 22.27 feet to the Northwestern corner of that certain parcel of land designated as Parcel Two in Quitclaim Deed from Anne Barnett to Michael L. Kamm and wife, under Recorder's Series No. AQ-72502, Alameda County Records; thence 
+    "n 85 24 10 e 22.27",
+    # along the Northern boundary line thereof the two following courses and distances; 
+    # North 85° 24' 10" East 39.77 feet and thence 
+    "n 85 24 10 e 39.77",
+    # North 83° 11' 05" East 23.75 feet to a point on the Southwestern boundary line of that certain parcel of land designated as Parcel One in Deed from Michael L. Kamm and wife, to Theresa Clark, dated August 27, 1953, recorded September 1, 1953, under Recorder's No. AH-77538, Book 7121, Page 221, Alameda County Records; thence 
+    # Likely Error in the description: 23.75 seems too long, changed to 3.75
+    "n 83 11 05 e 3.75",
+    # along the said last mentioned line 
+    # North 38° 49' 04" West 20.89 feet to the most Eastern corner of that certain parcel of land designated as Parcel One in Deed from Michael L. Kamm and wife, to Thomas H. Arkley and wife, dated September 30, 1958, recorded November 6, 1958, under Recorder's Series No. AP-115872, Book 8837, Page 97, Alameda County Records; thence 
+    "n 38 49 04 W 20.89",
+    # along the exterior boundary line of the said last, mentioned parcel of land the following courses and distances; 
+    # South 680 00' West 6.70 feet and thence 
+    "S 68 00 W 6.70",
+    # Westerly along the arc of a curve to the right with a radius of 30.00 feet tangent to the said last mentioned course, a distance of 5.67 feet to the most Eastern corner of that certain easement designated as Parcel Two, in the said last mentioned Deed to Thomas H. Arkley and wife, under Recorder's Series No. AP-115872, Alameda County Records; thence 
+    "S 68 00 W tangent right radius 30 length 5.67",
+    # along the Northern boundary line thereof the two following courses and distance: 
+    # South 850 24' 10" West 61.19 feet, and thence 
+    "S 85 24 10 W 61.19",
+    # South 890 12' 20" West 20.89 feet to the most Eastern corner of that certain parcel of land described in Quitclaim Deed from Thomas E. Arkley and wife, to Michael L. Kamm and wife, dated September 30, 1958, recorded November 6, 1958, under Recorder Series No. AP-115870, Book 8837, Page 95, Alameda County Records; thence 
+    "S 89 12 20 W 20.89",
+    # along the exterior boundary line of the said last mentioned parcel of land the two following courses and distances; 
+    # Westerly and Northwesterly along the arc of a curve to the right with a radius of 17.25 feet, tangent to the said last mentioned course, 13.52 feet and thence 
+    "S 89 12 20 W tangent right radius 17.25 length 13.52",
+    # North 450 53' West 44.55 feet to the most Western corner of the said last mentioned parcel of land; thence 
+    "N 45 53 W 44.55",
+    # along the Northern and Northeastern boundary lines of the said parcel of land described in Deed to Michael L. Kamm and wife, under Recorder's Series No. AH-67256, Alameda County Records, being also the Southern and Southwestern lines of Panoramic Way as described in instrument to City of Berkeley; dated February 1, 1936, recorded June 17, 1936, under Recorder's Series No. GG-31103, Book 3332, Page 308, Alameda County Records, the two following courses and distances; 
+    # South 860 28' 37" West 2.85 feet and thence 
+    "S 86 28 37 W 2.85",
+    # North 380 39' 45" West 11.48 feet; thence 
+    "N 38 39 45 W 11.48",
+    # North 380 14' West 3.52 feet to the point of beginning.
+    "N 38 14 W 3.52"
+]
+
+path_pob_Arkley_Morse_Parcel_3 = [ # starts at station 14
+    # South 35° 40' West 15.00 feet to an angle point thereon and thence
+    "s 35 40 w 15.00", 
+    # South 45° 53' East 78.37 feet; thence 
+    "s 45 53 e 78.37",
+    # North 72° 41' 20" East 12.74 feet; thence 
+    "n 72 41 20 e 12.74",
+    # North 85° 24' 10" East 37.15 feet to the most Western corner of that certain parcel of land designated as Parcel Three in Quitclaim Deed from Anne Barnett to Michael L. Kamm and Lenore K. Kamm, his wife, dated April 7, 1959, recorded June 18, 1959, under Recorder's Series No. AQ-72502, Book 9063, Page 509, Alameda County Records; thence 
+    "n 85 24 10 e 37.15"
+    ]
+
 path_radius_debug = [
     "s 0 w 20",
     "s 90 w 20",
@@ -347,9 +439,11 @@ segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_cor
 orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
 orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 
+segments = get_path_points(orig_station_14, ["s 35 40 w 15",], 1, -1) # change y coordinate to match matplotlib
+pob_parcel_A_2016 = last_point(segments)
 
-unknowwn_origin_info = {'pos_x':-10,'pos_y':30,'text':'unknown origin'}
-
+segments = get_path_points(orig_station_14, path_pob_Arkley_Morse_Parcel_3, 1, -1) # change y coordinate to match matplotlib
+pob_Arkley_Morse_Parcel_3 = last_point(segments)
 
 pix = [
     plot_info("1963 Hoffman Parcel 1",              orig_station_14,     path_1963_hoffmann_parcel_1),
@@ -360,10 +454,12 @@ pix = [
     plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
     plot_info("1969 Arkley Morse Parcel 1",         orig_station_14,     path_1969_Arkley_Morse_Parcel_1),
     plot_info("1969 Arkley Morse Parcel 2",         orig_station_14,     path_1969_Arkley_Morse_Parcel_2),
-    plot_info("1969 Arkley Morse Parcel 3",         orig_unknown,        path_1969_Arkley_Morse_Parcel_3, unknowwn_origin_info),
+    plot_info("1969 Arkley Morse Parcel 3",         pob_Arkley_Morse_Parcel_3,           path_1969_Arkley_Morse_Parcel_3),
     plot_info("1977 Kamm Morse PD 120 Parcel C",    orig_station_14,     path_1977_pd_120_parcel_c),
     plot_info("1999 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B),
     plot_info("1999 Morse Morse Parcel B Easement", orig_parcel_b,       path_1999_Morse_Morse_Parcel_B_Easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
+    plot_info("2016 Pyle Easement",                 pob_parcel_A_2016,   path_2016_Pyle_easement),
+    plot_info("2003 54 Panoramic Easement",         orig_station_14,    path_54_Pano_easement),
     plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
 ]
