@@ -49,8 +49,10 @@ path_1963_hoffmann_parcel_1 = [
     "s 39 52 45 w 24",
     "s 86 28 37 w 20.26",
     "n 38 39 45 w 11.48",
-    "n 38 14 w 3.52"
+    "n 38 14 w 3.52",
+
 ]
+
 
 #1963 Hoffmann
 #parcel 2 easement
@@ -85,8 +87,10 @@ path_1963_hoffmann_parcel_3 = [
     "n 8 10 30 w 166.19",
 ]
 
+
+
 path_pob_1963_hoffman_parcel_3_se_corner = [
-       "s 35 40 w 15",
+    "s 35 40 w 15",
     "s 45 53 e 78.37",
     "n 72 41 20 e 12.74",
     "n 85 24 10 e 37.15",
@@ -95,6 +99,29 @@ path_pob_1963_hoffman_parcel_3_se_corner = [
     "n 83 11 05 e 23.75",
     "s 38 49 04 e 116.78",
 ]
+
+path_1964_hoffmann_subdivides_54_56 = [
+    "s 35 40 w 15",
+    "s 45 53 e 78.37",
+    "n 72 41 20 e 12.74",
+    "n 85 24 10 e 37.15",
+    "n 85 24 10 e 2.27",
+    "pob",
+    "n 85 24 10 e 34.50",
+    ["s 18 2 15 e 131.28"],
+    "n 85 24 10 e 4.27",
+    "n 83 11 05 e 23.75",
+    "s 38 49 04 e 116.78",
+    "s 65 27 w 45",
+    "s 48 04 w 27.5",
+    ["n 18 2 15 w 131.28"],
+    "s 48 04 w 68.52",
+    "n 8 10 30 w 166.19",
+
+]
+
+
+
 
 #1965 Morse Deed Parcel A
 path_1965_Morse_Deed_Parcel_A = [
@@ -328,6 +355,7 @@ pix = [
     plot_info("1963 Hoffman Parcel 1",              orig_station_14,     path_1963_hoffmann_parcel_1),
     plot_info("1963 Hoffman Parcel 2 easement",     orig_se_crnr,        path_1963_hoffmann_parcel_2),
     plot_info("1963 Hoffman Parcel 3",              orig_station_14,     path_1963_hoffmann_parcel_3),
+    plot_info("1964 Hoffmann divides 54 56",        orig_station_14,     path_1964_hoffmann_subdivides_54_56),
     plot_info("1965 Morse Parcel A",                orig_station_14,     path_1965_Morse_Deed_Parcel_A),
     plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
     plot_info("1969 Arkley Morse Parcel 1",         orig_station_14,     path_1969_Arkley_Morse_Parcel_1),
