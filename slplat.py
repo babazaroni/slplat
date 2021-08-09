@@ -6,7 +6,7 @@ import math
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-from slplat_utils import get_path_points
+from slplat_utils import get_path_points,get_as_mb
 
 #import plat descriptors from definition file here
 from myproperty import pix
@@ -20,8 +20,8 @@ ax.axis('equal')
 for pi in pix:
     if st.sidebar.checkbox(pi.text,False):
         pi.selected = True
-        segments = get_path_points(pi.origin,pi.path,1,-1) # change y coordinate to match matplotlib
-        for segment in segments:
+        pi.segments = get_path_points(pi.origin,pi.path)
+        for segment in pi.segments:
             ax.plot(segment[0],segment[1])
 
         if pi.aux_info:
@@ -34,5 +34,9 @@ st.pyplot(fig)
 
 for pi in pix:
     if pi.selected:
-        st.text('{}: {} {}'.format(pi.text,pi.origin,pi.path))
+        st.text(pi.text)
+        mb_text = ""
+        for mb in get_as_mb(pi.segments):
+            mb_text += mb + '\n'
+        st.text(mb_text)
 

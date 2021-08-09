@@ -58,7 +58,7 @@ path_1963_hoffmann_parcel_1 = [
 #parcel 2 easement
 path_1963_hoffmann_parcel_2 = [
     "n 38 49 04 w 116.78",
-    "pob",
+#    "pob",  # point of beginning.  Previous entries are not displayed
     "n 38 49 04 w 15.67",
     "n 68 0 e 48.59 tangent left radius 10 length 3.49",
 
@@ -289,15 +289,15 @@ path_2016_lot_line = [
     "s 4 55 w 41.32",
     "s 4 55 w 112.86",
     "s 31 8 24 w 70.1",
-    "n 39 10 19 w 116.33",
-    [path_proposed_parcel_c],
-    "s 83 11 5 w 24.32",
+    "n 39 10 19 w 116.33",    # this is segment leading to a branch point
+    [path_proposed_parcel_c], # branch happens here
+    "s 83 11 5 w 24.32",      # this line continues on from the branch point
     [path_split_ab],
     "s 85 24 10 w 18.28",
     #[marker_vertical],
     "s 85 24 10 w 60.91",
     "s 72 41 20 w 12.74",
-    "n 45 53 w 78.37 delta 74 13 43 radius 15 length 19.43 ccw",
+    "n 45 53 w 78.37 delta 74 13 43 radius 15 length 19.43 ccw",  # an example of non tangent curve
 ]
 
 path_pob_parcel_b = [
@@ -321,15 +321,18 @@ path_pob_nw_parcel_c = [ # from pd 120
 ]
 
 path_radius_debug = [
-    "s 0 w 20",
-    "s 90 w 20",
-#    "n 0 e 20 delta 90 radius 10 length 62.83 ccw",
-
-#    "n 0 e 20 delta 90 radius 10 length 31.4 ccw",
- #   "n 0 e 20 delta 90 radius 10 length 15.7079632679 cw"
-    "n 0 e 20 tangent left radius 10 length 15"
-
+    "s 45 w 10",
+    "n 45 w 10",
+    "n 45 e 10",
+    "s 45 e 10"
 ]
+path_radius_debug = [
+    "s 55 w 10",
+    "n 65 w 10",
+    "n 55 e 10",
+    "s 65 e 10"
+]
+
 
 
 #setup various origins
@@ -337,13 +340,13 @@ path_radius_debug = [
 orig_station_14 = (0,0)
 orig_unknown = [0,25]
 
-segments = get_path_points(orig_station_14,path_pob_parcel_b,1,-1) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14,path_pob_parcel_b) # change y coordinate to match matplotlib
 orig_parcel_b = last_point(segments)
 
-segments = get_path_points(orig_station_14,path_pob_nw_parcel_c,1,-1) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14,path_pob_nw_parcel_c) # change y coordinate to match matplotlib
 orig_nw_parcel_c = last_point(segments)
 
-segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_corner,1,-1)
+segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_corner)
 orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
 orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 

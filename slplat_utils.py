@@ -90,8 +90,7 @@ def get_xy(mb):
         if nb(distance):
 
             x = math.sin(math.radians(tangent_dir)) * distance
-            y = -math.cos(math.radians(tangent_dir)) * distance
-
+            y = math.cos(math.radians(tangent_dir)) * distance
 
             rx.append(x)
             ry.append(y)
@@ -140,38 +139,25 @@ def get_xy(mb):
         #print("chord_length:",chord_length)
 
 
-        #chord direction needs debugging
-    
-        x = math.sin(chord_direction) * chord_length
-        y = -math.cos(chord_direction) * chord_length
 
-        #rx.append(x)
-        #ry.append(y)
-        #rx.append(-x)
-        #ry.append(-y)
-
-
-        arc_step_count = 40
+        degrees_per_step = 15.0
+        arc_step_count = round(math.degrees(arc_measure)/degrees_per_step) + 1 # so you get at least 1
         arc_step = arc_measure/arc_step_count
 
         #print('arc_step:',arc_step,type(arc_step))
 
-        center_x = radius * math.sin(math.radians(radial_dir))
-        center_y = radius * math.cos(math.radians(radial_dir))
 
-        reverse_radial_dir = math.radians(180) - radial_dir
-        reverse_radial_dir = radial_dir
-
-        ref_x = radius * math.sin(reverse_radial_dir)
-        ref_y = radius * math.cos(reverse_radial_dir)
+        ref_x = radius * math.sin(radial_dir)
+        ref_y = radius * math.cos(radial_dir)
     
 
         for i in range(arc_step_count):
-            reverse_radial_dir += arc_step * cw
-            x = radius * math.sin(reverse_radial_dir)
-            y = radius * math.cos(reverse_radial_dir)
+            radial_dir += arc_step * cw
+            x = radius * math.sin(radial_dir)
+            y = radius * math.cos(radial_dir)
             rx.append(ref_x - x)
-            ry.append(-(ref_y - y))
+ #           ry.append(-(ref_y - y))
+            ry.append(ref_y - y)
             ref_x = x
             ref_y = y
 
@@ -213,6 +199,74 @@ def get_path_points(origin,path,x_sign = 1, y_sign = 1):
     rval.extend(branches)
     
     return rval
+
+def get_as_mb(segments):
+    """Convert points back to metes and bounds
+    """
+
+    ref_x = 0.0
+    ref_y = 0.0
+
+    mbs = []
+    
+    for segment in segments:
+
+        xa = segment[0]
+        ya = segment[1]
+
+        for x,y in zip(xa,ya):
+
+            if x==0 and y==0:
+                continue
+
+            dx = x - ref_x
+            dy = y - ref_y
+
+            mb = ""
+
+            if dx == 0:
+                if dy >= 0:
+                    mb = 'n 0 e {}'.format(dy)
+                else:
+                    mb = 's 0 w {}'.format(-dy)
+            else:
+                if dy == 0:
+                    if dx >= 0:
+                        mb = 'n 90 e {}'.format(dx)
+                    else:
+                        mb = 'n 90 w {}'.format(-dx)
+                else:
+
+                    ang = math.degrees(math.atan(dx/dy))
+                    ang = round(ang,10)
+
+                    if dy >= 0:
+                        mb = "n {}".format(abs(ang))
+                        if dx >= 0:
+                            mb += " e"
+                        else:
+                            mb += " w"
+                    else:
+                        mb = "s {}".format(abs(ang))
+                        if dx >= 0:
+                            mb += " e"
+                        else:
+                            mb += " w"
+
+            length = math.sqrt(dx**2 + dy**2)
+            length = round(length,10)
+
+            mb += " {}".format(length)
+ 
+            ref_x = x
+            ref_y = y
+
+            mbs.append(mb)
+    
+    return mbs
+
+
+
 
 def last_point(segments):
     seg = segments[-1]
