@@ -164,6 +164,57 @@ path_1965_Morse_Easement = [
 
 ]
 
+path_1966_Morse_Deed_Parcel_1 = [
+    "s 35 40 w 15",
+    "s 45 53 e 78.37",
+    "n 72 41 20 e 12.74",
+    "n 85 24 10 e 60.91",
+    "pob",
+    "n 85 24 10 e 18.28",
+    "n 83 11 5 e 23.75",
+    "n 38 49 4 w 20.89",
+    "s 68 w 6.75 tangent right radius 30 length 5.67",
+    "n 7 26 30 e 19.92",
+    "n 8 48 w 12 tangent right radius 20 length 31.42",
+    "n 81 12 e 36 tangent right radius 20 length 23.02",
+    "n 15 7 59 e 42.7",
+    "n 84 4 31 w 48.35",
+    "n 79 4 21 w 26",
+    "s 62 51 w 45.58",
+    "s 5 42 e 36.75",
+    "s 8 48 e 62.11"
+    ]
+
+path_1966_Morse_Deed_Parcel_2 = [
+    "s 35 40 w 15",
+    "s 45 53 e 78.37",
+    "n 72 41 20 e 12.74",
+    "n 85 24 10 e 37.15",
+    "n 85 24 10 e 2.27",
+    "n 85 24 10 e 39.77",
+    "n 83 11 5 e 23.75",
+    "n 38 49 4 w 20.89",
+    "s 68 w 6.75 tangent right radius 30 length 5.67",
+    "s 85 24 10 w 61.19",
+    "s 89 12 29 w 20.89 tangent right radius 17.25 length 13.52",
+    "n 45 53 w 44.55",
+    "s 86 28 37 w 2.85",
+    "n 38 39 45 w 11.48",
+    "n 38 14 w 3.52"
+]
+path_1966_Morse_Deed_Parcel_3 = [
+    "n 38 49 4 w 116.78",
+    "pob",
+    "n 38 49 04 w 15.67",
+    "n 68 e 48.59 tngent left radius 10 length 3.49",
+    "n 48 e 25.48",
+    "s 33 04 14 e 15.19",
+    "s 48 w 23.12 tangent right radius 25 length 8.73",
+    "s 68 w 44.06",
+]
+
+
+
 # 1969 Arkley to Morse
 # Parcel 1
 
@@ -457,13 +508,16 @@ pix = [
     plot_info("1964 Hoffmann divides 54 56",        orig_station_14,     path_1964_hoffmann_subdivides_54_56),
     plot_info("1965 Morse Parcel A",                orig_station_14,     path_1965_Morse_Deed_Parcel_A),
     plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
+    plot_info("1966 Morse Parcel 1",                orig_station_14,     path_1966_Morse_Deed_Parcel_1),
+    plot_info("1966 Morse Parcel 2",                orig_station_14,     path_1966_Morse_Deed_Parcel_2),
+    plot_info("1966 Morse Parcel 3",                orig_se_crnr,        path_1966_Morse_Deed_Parcel_3),
     plot_info("1969 Arkley Morse Parcel 1",         orig_station_14,     path_1969_Arkley_Morse_Parcel_1),
     plot_info("1969 Arkley Morse Parcel 2",         orig_station_14,     path_1969_Arkley_Morse_Parcel_2),
-    plot_info("1969 Arkley Morse Parcel 3",         pob_Arkley_Morse_Parcel_3,           path_1969_Arkley_Morse_Parcel_3),
+    plot_info("1969 Arkley Morse Parcel 3",         pob_Arkley_Morse_Parcel_3,path_1969_Arkley_Morse_Parcel_3),
     plot_info("1977 Kamm Morse PD 120 Parcel C",    orig_station_14,     path_1977_pd_120_parcel_c),
     plot_info("1993 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1993_Morse_Morse_Parcel_B),
     plot_info("1993 Morse Morse Parcel B Easement", orig_parcel_b,       path_1993_Morse_Morse_Parcel_B_Easement),
-    plot_info("2003 54 Panoramic Easement",         orig_station_14,    path_54_Pano_easement),
+    plot_info("2003 54 Panoramic Easement",         orig_station_14,     path_54_Pano_easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
     plot_info("2016 Pyle Easement",                 pob_parcel_A_2016,   path_2016_Pyle_easement),
     plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),

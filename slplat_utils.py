@@ -98,6 +98,8 @@ def get_xy(mb):
 
     #storyofmathematics.com/circle-chord
 
+
+
     if nb(tangent_dir) and nb(tangent_curve) and nb(curve_dir):
         if curve_dir == 1:
             delta_angle = 90
