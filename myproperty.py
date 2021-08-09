@@ -246,7 +246,7 @@ path_1977_pd_120_parcel_c = [
 
 #1999 57 Panoramic
 #Parcel B
-path_1999_Morse_Morse_Parcel_B = [
+path_1993_Morse_Morse_Parcel_B = [
     "s 5 10 w 41.32",
     "s 58 12 20 w 145.66",
     "s 38 49 4 e 6.61",
@@ -263,7 +263,7 @@ path_1999_Morse_Morse_Parcel_B = [
 
 #1999 57 Paoramic
 #turn around easement
-path_1999_Morse_Morse_Parcel_B_Easement = [
+path_1993_Morse_Morse_Parcel_B_Easement = [
     "n 8 48 w 15.03",
     "pob",
     "n 85 24 10 e 19.38",
@@ -461,10 +461,10 @@ pix = [
     plot_info("1969 Arkley Morse Parcel 2",         orig_station_14,     path_1969_Arkley_Morse_Parcel_2),
     plot_info("1969 Arkley Morse Parcel 3",         pob_Arkley_Morse_Parcel_3,           path_1969_Arkley_Morse_Parcel_3),
     plot_info("1977 Kamm Morse PD 120 Parcel C",    orig_station_14,     path_1977_pd_120_parcel_c),
-    plot_info("1999 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1999_Morse_Morse_Parcel_B),
-    plot_info("1999 Morse Morse Parcel B Easement", orig_parcel_b,       path_1999_Morse_Morse_Parcel_B_Easement),
+    plot_info("1993 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1993_Morse_Morse_Parcel_B),
+    plot_info("1993 Morse Morse Parcel B Easement", orig_parcel_b,       path_1993_Morse_Morse_Parcel_B_Easement),
+    plot_info("2003 54 Panoramic Easement",         orig_station_14,    path_54_Pano_easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
     plot_info("2016 Pyle Easement",                 pob_parcel_A_2016,   path_2016_Pyle_easement),
-    plot_info("2003 54 Panoramic Easement",         orig_station_14,    path_54_Pano_easement),
     plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
 ]
