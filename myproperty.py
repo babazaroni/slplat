@@ -14,6 +14,11 @@ from slplat_utils import get_path_points,plot_info,last_point
 # 2 if your curve is not tangent, then you can specify the bearing to the center of the circle with the delta from the current bearing
 #   Then specify radius and length, followed by the direction of the curve clockwise(cw) or counter clockwise(ccw)
 #   You can specify a tangent curve with delta by specifying "delta 90" or "delta 270"
+#
+# Misc Entries
+#   pob   Point of beginning.  Segments before are not displayed, but used to calculate beginning of plat
+#   array An array of entries describes a branch.  After the branch is displayed, the plotting resumes from start of branch
+
 
 
 #1963 Hoffmann
@@ -58,7 +63,7 @@ path_1963_hoffmann_parcel_1 = [
 #parcel 2 easement
 path_1963_hoffmann_parcel_2 = [
     "n 38 49 04 w 116.78",
-#    "pob",  # point of beginning.  Previous entries are not displayed
+    "pob",  # point of beginning.  Previous entries are not displayed
     "n 38 49 04 w 15.67",
     "n 68 0 e 48.59 tangent left radius 10 length 3.49",
 
@@ -108,8 +113,8 @@ path_1964_hoffmann_subdivides_54_56 = [
     "n 85 24 10 e 2.27",
     "pob",
     "n 85 24 10 e 34.50",
-    ["s 18 2 15 e 131.28"],
-    "n 85 24 10 e 4.27",
+    ["s 18 2 15 e 131.28"], # A branch is displayed.
+    "n 85 24 10 e 4.27",    # This entry resumes from beginning of branch
     "n 83 11 05 e 23.75",
     "s 38 49 04 e 116.78",
     "s 65 27 w 45",
@@ -119,9 +124,6 @@ path_1964_hoffmann_subdivides_54_56 = [
     "n 8 10 30 w 166.19",
 
 ]
-
-
-
 
 #1965 Morse Deed Parcel A
 path_1965_Morse_Deed_Parcel_A = [
@@ -340,10 +342,10 @@ path_radius_debug = [
 orig_station_14 = (0,0)
 orig_unknown = [0,25]
 
-segments = get_path_points(orig_station_14,path_pob_parcel_b) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14,path_pob_parcel_b)
 orig_parcel_b = last_point(segments)
 
-segments = get_path_points(orig_station_14,path_pob_nw_parcel_c) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14,path_pob_nw_parcel_c)
 orig_nw_parcel_c = last_point(segments)
 
 segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_corner)
