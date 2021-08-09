@@ -444,10 +444,10 @@ segments = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_cor
 orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
 orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 
-segments = get_path_points(orig_station_14, ["s 35 40 w 15",], 1, -1) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14, ["s 35 40 w 15"])
 pob_parcel_A_2016 = last_point(segments)
 
-segments = get_path_points(orig_station_14, path_pob_Arkley_Morse_Parcel_3, 1, -1) # change y coordinate to match matplotlib
+segments = get_path_points(orig_station_14, path_pob_Arkley_Morse_Parcel_3)
 pob_Arkley_Morse_Parcel_3 = last_point(segments)
 
 pix = [
