@@ -295,6 +295,59 @@ path_1977_pd_120_parcel_c = [
     "n 15 7 59 e 42.7"
 ]
 
+path_pd_120 = [
+    [
+    "s 38 14 e 3.52",
+    "s 38 39 45 e 11.48",
+    "n 86 28 37 e 6.87",
+    "n 86 28 37 e 13.39",
+    "n 39 52 45 e 24",
+    "n 62 51 e 70",
+    "n 62 51 e 45.58",
+    "s 79 4 21 e 26",
+    "s 84 4 31 e 48.35",
+    "s 84 4 31 e 12.67",
+    "n 68 58 40 e 55.73", # could be 55.23
+    "s 6 10 w 154.66",
+    "n 33 3 14 w 112.52",
+    ["n 15 7 59 e 42.7"],
+    "n 33 3 14 w tangent left radius 20 length 23.02",
+    "s 81 12 w 36 tangent left radius 20 length 31.42",
+    "s 8 48 e 4.57",
+    [   "s 8 48 e 7.43",
+        "s 7 27 13 w 20.05"],
+    "s 85 29 10 w 25",
+    ["n 8 48 w 20",
+    "n 5 42 w 36.75"],
+    "s 8 48 e 18.93",
+    ["s 8 48 e 23.18"],
+    "s 71 40 4 w 21.53",
+    "s 85 24 10 w 35.99 tangent right radius 20 length 17",
+    "n 45 53 w 40.14"
+    ],
+    ["s 35 40 w 15",
+    ["s 35 40 w delta 180 radius 15 length 40 ccw"],
+     "s 45 53 e 78.37",
+    "n 72 41 20 e 12.74",
+    "n 85 24 10 e 60.91",
+    "n 85 24 10 e 18.28",
+    "n 83 11 5 e 23.75",
+    #"n 38 49 4 w 20.89",
+    [
+    "n 38 49 4 w 15.67", # to sewer easement
+    "n 38 49 4 w 5.22",
+    "s 68 00 w 6.75 tangent right radius 30 length 5.67"
+    ],
+    ["n 68 e 44.06 tangent left radius 25 length 8.73",
+    "n 48 e 23.12"]
+
+]
+
+
+
+
+]
+
 #1999 57 Panoramic
 #Parcel B
 path_1993_Morse_Morse_Parcel_B = [
@@ -506,6 +559,7 @@ pix = [
     plot_info("1963 Hoffman Parcel 2 easement",     orig_se_crnr,        path_1963_hoffmann_parcel_2),
     plot_info("1963 Hoffman Parcel 3",              orig_station_14,     path_1963_hoffmann_parcel_3),
     plot_info("1964 Hoffmann divides 54 56",        orig_station_14,     path_1964_hoffmann_subdivides_54_56),
+    plot_info("1964 PD 120 unfinished",                        orig_station_14,     path_pd_120),
     plot_info("1965 Morse Parcel A",                orig_station_14,     path_1965_Morse_Deed_Parcel_A),
     plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
     plot_info("1966 Morse Parcel 1",                orig_station_14,     path_1966_Morse_Deed_Parcel_1),
