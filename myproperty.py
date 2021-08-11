@@ -16,8 +16,10 @@ from slplat_utils import get_path_points,plot_info,last_point
 #   You can specify a tangent curve with delta by specifying "delta 90" or "delta 270"
 #
 # Misc Entries
-#   pob   Point of beginning.  Segments before are not displayed, but used to calculate beginning of plat
-#   array An array of entries describes a branch.  After the branch is displayed, the plotting resumes from start of branch
+#   pob     Point of beginning.  Segments before are not displayed, but used to calculate beginning of plat
+#   array   An array of entries describes a branch.  After the branch is displayed, the plotting resumes from start of branch
+#   c       next argument specifies color of line.  Use any matplotlib color
+#   ls      next argument specifies style of lline. Use any matplotlib line style like 'dashed'
 
 
 
@@ -62,6 +64,7 @@ path_1963_hoffmann_parcel_1 = [
 #1963 Hoffmann
 #parcel 2 easement
 path_1963_hoffmann_parcel_2 = [
+    "ls = dashed",
     "n 38 49 04 w 116.78",
     "pob",  # point of beginning.  Previous entries are not displayed
     "n 38 49 04 w 15.67",
@@ -144,6 +147,7 @@ path_1965_Morse_Deed_Parcel_A = [
 
 #1965 Morse Deed Easement
 path_1965_Morse_Easement = [
+    "ls dashed",
     "s 35 40  w 15",
     "s 45 53 e 78.37",
     "n 72 41 20 e 12.74",
@@ -186,6 +190,7 @@ path_1966_Morse_Deed_Parcel_1 = [
     ]
 
 path_1966_Morse_Deed_Parcel_2 = [
+    "ls dashed",
     "s 35 40 w 15",
     "s 45 53 e 78.37",
     "n 72 41 20 e 12.74",
@@ -203,6 +208,7 @@ path_1966_Morse_Deed_Parcel_2 = [
     "n 38 14 w 3.52"
 ]
 path_1966_Morse_Deed_Parcel_3 = [
+    "ls dashed",
     "n 38 49 4 w 116.78",
     "pob",
     "n 38 49 04 w 15.67",
@@ -245,6 +251,7 @@ path_1969_Arkley_Morse_Parcel_1 = [
 # 1969 Arkley to Morse
 #parcel 2
 path_1969_Arkley_Morse_Parcel_2 = [
+    "ls dashed",
     "s 35 40 w 15",
     "s 45 53 e 78.37",
     "n 72 41 20 e 12.74",
@@ -268,6 +275,7 @@ path_1969_Arkley_Morse_Parcel_2 = [
 # 1969 Arkley to Morse
 #parcel 3
 path_1969_Arkley_Morse_Parcel_3 = [
+    "ls dashed",
     "s 8 10 30 e .27",
     "n 85 24 10 e 39.77",
     "n 83 11 5 e 23.75",
@@ -299,6 +307,7 @@ path_pd_120 = [
     [
     "s 38 14 e 3.52",
     "s 38 39 45 e 11.48",
+    "pob",
     "n 86 28 37 e 6.87",
     "n 86 28 37 e 13.39",
     "n 39 52 45 e 24",
@@ -326,7 +335,8 @@ path_pd_120 = [
     "n 45 53 w 40.14"
     ],
     ["s 35 40 w 15",
-    ["s 35 40 w delta 180 radius 15 length 40 ccw"],
+    "pob",
+    ["s 35 40 w delta 180 radius 15 length 20 ccw"],
      "s 45 53 e 78.37",
     "n 72 41 20 e 12.74",
     "n 85 24 10 e 60.91",
@@ -368,6 +378,7 @@ path_1993_Morse_Morse_Parcel_B = [
 #1999 57 Paoramic
 #turn around easement
 path_1993_Morse_Morse_Parcel_B_Easement = [
+    "ls dashed",
     "n 8 48 w 15.03",
     "pob",
     "n 85 24 10 e 19.38",
@@ -427,6 +438,7 @@ path_pob_nw_parcel_c = [ # from pd 120
 ]
 
 path_2016_Pyle_easement = [
+    "ls dashed",
     # Beginning at the most western corner of Parcel A, as shown on 
     # Lot Line Adjustment 314 recorded November 16, 2016, at Series 
     # Number 2016299641, in Official Records of the County
@@ -460,12 +472,14 @@ path_2016_Pyle_easement = [
 ]
 
 path_54_Pano_easement = [
+    "ls dashed",
     # A portion of that certain parcel of land described in Deed from the Regents of the University of California, a corporation, to Michael L. Kamm and wife, dated July 15, 1953, recorded July 28, 1953, under Recoder's Series No. AH-67256, Book 7092, Page 477, Alameda County Records, bounded as follows: 
     # Beginning at Station 14 in the center line of Panoramic Way, as said Station and Way are shown on the map of "University Terrace", filed August 14, 1888, Map Book 10, Page 30, Alameda County Records; 
     # running thence along the exterior boundary line of the said Kamm parcel of land the two following courses and distance; 
     # South 35° 40' West 15.00 feet to an angle point thereon and thence
     "s 35 40 w 15.00", 
     # South 45° 53' East 78.37 feet; thence 
+    "pob",
     "s 45 53 e 78.37",
     # North 72° 41' 20" East 12.74 feet; thence 
     "n 72 41 20 e 12.74",
@@ -502,9 +516,9 @@ path_54_Pano_easement = [
     # South 860 28' 37" West 2.85 feet and thence 
     "S 86 28 37 W 2.85",
     # North 380 39' 45" West 11.48 feet; thence 
-    "N 38 39 45 W 11.48",
+    #"N 38 39 45 W 11.48",  # cc commented as outside private property
     # North 380 14' West 3.52 feet to the point of beginning.
-    "N 38 14 W 3.52"
+    #"N 38 14 W 3.52"
 ]
 
 path_pob_Arkley_Morse_Parcel_3 = [ # starts at station 14
@@ -574,5 +588,5 @@ pix = [
     plot_info("2003 54 Panoramic Easement",         orig_station_14,     path_54_Pano_easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
     plot_info("2016 Pyle Easement",                 pob_parcel_A_2016,   path_2016_Pyle_easement),
-    plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
+    #plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
 ]

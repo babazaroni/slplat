@@ -22,7 +22,8 @@ for pi in pix:
         pi.selected = True
         pi.segments = get_path_points(pi.origin,pi.path)
         for segment in pi.segments:
-            ax.plot(segment[0],segment[1])
+            print(segment['color'])
+            ax.plot(segment['x'],segment['y'],ls = segment['ls'],color = segment['color'],alpha = .7)
 
         if pi.aux_info:
             ax.text(pi.aux_info['pos_x'],pi.aux_info['pos_y'],pi.aux_info['text'])

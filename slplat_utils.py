@@ -3,10 +3,11 @@ import math
 def nb(val):  # check for not boolean.
     return not isinstance(val,bool)
 
-def get_xy(mb):
+def get_xy(mb,properties):
+    print('mb',mb)
     def set_mode(key):
         nonlocal mode
-        if key in ['dir','delta','radius','length','cw','ccw','t','tangent','right','left']:
+        if key in ['dir','delta','radius','length','cw','ccw','t','tangent','right','left','ls','c']:
             mode = key
 
             return True
@@ -52,6 +53,12 @@ def get_xy(mb):
                 if len(dir) == 2:
                     mode = 'distance'
                     continue
+
+            if mode == 'ls':  #line style
+                properties['ls'] = m
+            if mode == 'c': #color
+                properties['color'] = m
+
         else:
 
             if mode == 'dir':
@@ -167,7 +174,7 @@ def get_xy(mb):
 
 
     
-def get_path_points(origin,path,x_sign = 1, y_sign = 1):
+def get_path_points(origin,path):
 
     x = [origin[0]]
     y = [origin[1]]
@@ -176,11 +183,13 @@ def get_path_points(origin,path,x_sign = 1, y_sign = 1):
 
     scale = 1.0 #pixels per foot
 
+    properties = {'ls': 'solid','color':'black'}
+
     for mb in path:
 
         if type(mb) is list:
  
-            branches.extend (get_path_points([x[-1],y[-1]],mb,x_sign,y_sign) )
+            branches.extend (get_path_points([x[-1],y[-1]],mb) )
 
         else:
 
@@ -189,17 +198,18 @@ def get_path_points(origin,path,x_sign = 1, y_sign = 1):
                 y = [y[-1]]
                 continue
 
-            px,py = get_xy(mb)
+            px,py = get_xy(mb,properties)
 
             for zx,zy in zip(px,py):
-                x.append(x[-1] + zx * scale * x_sign)
-                y.append(y[-1] + zy * scale * y_sign)
+                x.append(x[-1] + zx * scale)
+                y.append(y[-1] + zy * scale)
 
 
-
-    rval = [ (x,y) ]
+    properties['x'] = x
+    properties['y'] = y
+    rval = [ properties ]
     rval.extend(branches)
-    
+
     return rval
 
 def get_as_mb(segments):
@@ -213,8 +223,8 @@ def get_as_mb(segments):
     
     for segment in segments:
 
-        xa = segment[0]
-        ya = segment[1]
+        xa = segment['x']
+        ya = segment['y']
 
         for x,y in zip(xa,ya):
 
@@ -272,7 +282,7 @@ def get_as_mb(segments):
 
 def last_point(segments):
     seg = segments[-1]
-    return [seg[0][-1],seg[1][-1]]
+    return [seg['x'][-1],seg['y'][-1]]
 
 class plot_info():
     def __init__(self,text,origin,path,aux_info = None):
