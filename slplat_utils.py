@@ -3,11 +3,10 @@ import math
 def nb(val):  # check for not boolean.
     return not isinstance(val,bool)
 
-def get_xy(mb,properties):
-    print('mb',mb)
+def get_xy(mb):
     def set_mode(key):
         nonlocal mode
-        if key in ['dir','delta','radius','length','cw','ccw','t','tangent','right','left','ls','c']:
+        if key in ['dir','delta','radius','length','cw','ccw','t','tangent','right','left']:
             mode = key
 
             return True
@@ -53,12 +52,6 @@ def get_xy(mb,properties):
                 if len(dir) == 2:
                     mode = 'distance'
                     continue
-
-            if mode == 'ls':  #line style
-                properties['ls'] = m
-            if mode == 'c': #color
-                properties['color'] = m
-
         else:
 
             if mode == 'dir':
@@ -183,34 +176,49 @@ def get_path_points(origin,path):
 
     scale = 1.0 #pixels per foot
 
-    properties = {'ls': 'solid','color':'black'}
+    property_sets = []
+    segment_sets = []
+
+    property_set = {'ls': 'solid','color':'black'}
 
     for mb in path:
 
         if type(mb) is list:
  
-            branches.extend (get_path_points([x[-1],y[-1]],mb) )
+            branch_segments,branch_property_sets = get_path_points([x[-1],y[-1]],mb) 
 
-        else:
+            segment_sets.extend(branch_segments)
+            property_sets.extend(branch_property_sets)
+
+        if type(mb) is dict:
+            segment_sets.append({'x':x,'y':y})
+            property_sets.append(property_set)
+
+            x = [x[-1]]
+            y = [y[-1]]
+
+            property_set = property_set.copy()
+
+            for key in mb.keys():
+                property_set[key] = mb[key]
+
+        if type(mb) is str:
 
             if mb == "pob":
                 x = [x[-1]]
                 y = [y[-1]]
                 continue
 
-            px,py = get_xy(mb,properties)
+            px,py = get_xy(mb)
 
             for zx,zy in zip(px,py):
                 x.append(x[-1] + zx * scale)
                 y.append(y[-1] + zy * scale)
 
+    segment_sets.append({'x':x,'y':y})
+    property_sets.append(property_set)
 
-    properties['x'] = x
-    properties['y'] = y
-    rval = [ properties ]
-    rval.extend(branches)
-
-    return rval
+    return segment_sets,property_sets
 
 def get_as_mb(segments):
     """Convert points back to metes and bounds

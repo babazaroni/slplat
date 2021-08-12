@@ -10,6 +10,7 @@ from slplat_utils import get_path_points,get_as_mb
 
 #import plat descriptors from definition file here
 from myproperty import pix
+#pix = []
 
 st.set_page_config(layout='wide')
 mpl.rcParams['lines.linewidth'] = 1
@@ -17,13 +18,18 @@ mpl.rcParams['lines.linewidth'] = 1
 fig, ax = plt.subplots()
 ax.axis('equal')
 
+#segments = {}
+#segments['X']= [0,1,23,78]
+#segments['Y']= [0,1,14,23]
+#ax.plot([0,1],[0,1])
+
 for pi in pix:
     if st.sidebar.checkbox(pi.text,False):
         pi.selected = True
-        pi.segments = get_path_points(pi.origin,pi.path)
-        for segment in pi.segments:
-            print(segment['color'])
-            ax.plot(segment['x'],segment['y'],ls = segment['ls'],color = segment['color'],alpha = .7)
+        pi.segments,properties = get_path_points(pi.origin,pi.path)
+
+        for segment,property in zip(pi.segments,properties):
+            ax.plot(segment['x'],segment['y'],**property,alpha = .5)
 
         if pi.aux_info:
             ax.text(pi.aux_info['pos_x'],pi.aux_info['pos_y'],pi.aux_info['text'])
