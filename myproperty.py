@@ -274,8 +274,17 @@ path_1969_Arkley_Morse_Parcel_2 = [
     "n 38 14 w 3.52"
 ]
 # 1969 Arkley to Morse
-#parcel 3
+
 path_1969_Arkley_Morse_Parcel_3 = [
+    # South 35° 40' West 15.00 feet to an angle point thereon and thence
+    "s 35 40 w 15.00", 
+    # South 45° 53' East 78.37 feet; thence 
+    "s 45 53 e 78.37",
+    # North 72° 41' 20" East 12.74 feet; thence 
+    "n 72 41 20 e 12.74",
+    # North 85° 24' 10" East 37.15 feet to the most Western corner of that certain parcel of land designated as Parcel Three in Quitclaim Deed from Anne Barnett to Michael L. Kamm and Lenore K. Kamm, his wife, dated April 7, 1959, recorded June 18, 1959, under Recorder's Series No. AQ-72502, Book 9063, Page 509, Alameda County Records; thence 
+    "n 85 24 10 e 37.15",
+    "pob",
     {"ls": "dashed"},
     "s 8 10 30 e .27",
     "n 85 24 10 e 39.77",
@@ -347,6 +356,7 @@ path_pd_120 = [
     #"n 38 49 4 w 20.89",
     [
     "n 38 49 4 w 15.67", # to sewer easement
+    [{"ls":"dashed"},"n 68 e 48.59 tangent left radius 10 length 3.49","n 48 e 25.56"],
     "n 38 49 4 w 5.22",
     "s 68 00 w 6.75 tangent right radius 30 length 5.67"
     ],
@@ -443,6 +453,8 @@ path_pob_nw_parcel_c = [ # from pd 120
 
 path_2016_Pyle_easement = [
      {"ls": "dashed"},
+     "s 35 40 w 15",
+     "pob",
     # Beginning at the most western corner of Parcel A, as shown on 
     # Lot Line Adjustment 314 recorded November 16, 2016, at Series 
     # Number 2016299641, in Official Records of the County
@@ -525,17 +537,6 @@ path_54_Pano_easement = [
     #"N 38 14 W 3.52"
 ]
 
-path_pob_Arkley_Morse_Parcel_3 = [ # starts at station 14
-    # South 35° 40' West 15.00 feet to an angle point thereon and thence
-    "s 35 40 w 15.00", 
-    # South 45° 53' East 78.37 feet; thence 
-    "s 45 53 e 78.37",
-    # North 72° 41' 20" East 12.74 feet; thence 
-    "n 72 41 20 e 12.74",
-    # North 85° 24' 10" East 37.15 feet to the most Western corner of that certain parcel of land designated as Parcel Three in Quitclaim Deed from Anne Barnett to Michael L. Kamm and Lenore K. Kamm, his wife, dated April 7, 1959, recorded June 18, 1959, under Recorder's Series No. AQ-72502, Book 9063, Page 509, Alameda County Records; thence 
-    "n 85 24 10 e 37.15"
-    ]
-
 path_radius_debug = [
     "s 45 w 10",
     "n 45 w 10",
@@ -570,15 +571,13 @@ orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
 segments,_ = get_path_points(orig_station_14, ["s 35 40 w 15"])
 pob_parcel_A_2016 = last_point(segments)
 
-segments,_ = get_path_points(orig_station_14, path_pob_Arkley_Morse_Parcel_3)
-pob_Arkley_Morse_Parcel_3 = last_point(segments)
 
 pix = [
     plot_info("1963 Hoffman Parcel 1",              orig_station_14,     path_1963_hoffmann_parcel_1),
     plot_info("1963 Hoffman Parcel 2 easement",     orig_se_crnr,        path_1963_hoffmann_parcel_2),
     plot_info("1963 Hoffman Parcel 3",              orig_station_14,     path_1963_hoffmann_parcel_3),
     plot_info("1964 Hoffmann divides 54 56",        orig_station_14,     path_1964_hoffmann_subdivides_54_56),
-    plot_info("1964 PD 120 unfinished",                        orig_station_14,     path_pd_120),
+    plot_info("1964 PD 120",                        orig_station_14,     path_pd_120),
     plot_info("1965 Morse Parcel A",                orig_station_14,     path_1965_Morse_Deed_Parcel_A),
     plot_info("1965 Morse Easement",                orig_station_14,     path_1965_Morse_Easement),
     plot_info("1966 Morse Parcel 1",                orig_station_14,     path_1966_Morse_Deed_Parcel_1),
@@ -586,12 +585,12 @@ pix = [
     plot_info("1966 Morse Parcel 3",                orig_se_crnr,        path_1966_Morse_Deed_Parcel_3),
     plot_info("1969 Arkley Morse Parcel 1",         orig_station_14,     path_1969_Arkley_Morse_Parcel_1),
     plot_info("1969 Arkley Morse Parcel 2",         orig_station_14,     path_1969_Arkley_Morse_Parcel_2),
-    plot_info("1969 Arkley Morse Parcel 3",         pob_Arkley_Morse_Parcel_3,path_1969_Arkley_Morse_Parcel_3),
+    plot_info("1969 Arkley Morse Parcel 3",         orig_station_14,     path_1969_Arkley_Morse_Parcel_3),
     plot_info("1977 Kamm Morse PD 120 Parcel C",    orig_station_14,     path_1977_pd_120_parcel_c),
     plot_info("1993 Morse Morse Parcel B",          orig_nw_parcel_c,    path_1993_Morse_Morse_Parcel_B),
     plot_info("1993 Morse Morse Parcel B Easement", orig_parcel_b,       path_1993_Morse_Morse_Parcel_B_Easement),
     plot_info("2003 54 Panoramic Easement",         orig_station_14,     path_54_Pano_easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
-    plot_info("2016 Pyle Easement",                 pob_parcel_A_2016,   path_2016_Pyle_easement),
+    plot_info("2016 Pyle Easement",                 orig_station_14,     path_2016_Pyle_easement),
     plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
 ]
