@@ -191,13 +191,14 @@ def get_path_points(origin,path):
             property_sets.extend(branch_property_sets)
 
         if type(mb) is dict:
-            segment_sets.append({'x':x,'y':y})
-            property_sets.append(property_set)
+            if len(x) > 1:
+                segment_sets.append({'x':x,'y':y})
+                property_sets.append(property_set)
 
-            x = [x[-1]]
-            y = [y[-1]]
+                x = [x[-1]]
+                y = [y[-1]]
 
-            property_set = property_set.copy()
+                property_set = property_set.copy()
 
             for key in mb.keys():
                 property_set[key] = mb[key]
