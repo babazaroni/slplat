@@ -29,7 +29,7 @@ for pi in pix:
         pi.segments,properties = get_path_points(pi.origin,pi.path)
 
         for segment,property in zip(pi.segments,properties):
-            ax.plot(segment['x'],segment['y'],**property,alpha = .5)
+            ax.plot(segment['x'],segment['y'],**property)
 
         if pi.aux_info:
             ax.text(pi.aux_info['pos_x'],pi.aux_info['pos_y'],pi.aux_info['text'])

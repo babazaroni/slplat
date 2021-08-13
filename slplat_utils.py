@@ -179,7 +179,7 @@ def get_path_points(origin,path):
     property_sets = []
     segment_sets = []
 
-    property_set = {'ls': 'solid','color':'black'}
+    property_set = {'ls': 'solid','color':'black','alpha': .5}
 
     for mb in path:
 
