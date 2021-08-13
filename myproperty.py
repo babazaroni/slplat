@@ -556,7 +556,6 @@ path_radius_debug = [
 #setup various origins
 
 orig_station_14 = (0,0)
-orig_unknown = [0,25]
 
 segments,_ = get_path_points(orig_station_14,path_pob_parcel_b)
 orig_parcel_b = last_point(segments)
@@ -567,10 +566,6 @@ orig_nw_parcel_c = last_point(segments)
 segments,_ = get_path_points(orig_station_14,path_pob_1963_hoffman_parcel_3_se_corner)
 orig_1963_hoffman_parcel_3_se_corner = last_point(segments)
 orig_se_crnr = orig_1963_hoffman_parcel_3_se_corner
-
-segments,_ = get_path_points(orig_station_14, ["s 35 40 w 15"])
-pob_parcel_A_2016 = last_point(segments)
-
 
 pix = [
     plot_info("1963 Hoffman Parcel 1",              orig_station_14,     path_1963_hoffmann_parcel_1),
@@ -592,5 +587,5 @@ pix = [
     plot_info("2003 54 Panoramic Easement",         orig_station_14,     path_54_Pano_easement),
     plot_info("2016 Lot Line Adjustment",           orig_station_14,     path_2016_lot_line),
     plot_info("2016 Pyle Easement",                 orig_station_14,     path_2016_Pyle_easement),
-    plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
+    #plot_info("path radius_debug",                  orig_station_14,     path_radius_debug),
 ]
